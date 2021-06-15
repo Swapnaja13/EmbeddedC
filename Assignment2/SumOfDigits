@@ -1,1 +1,22 @@
-/*Program to find the sum of digits of a number until the sum is reduce to 1digit*/
+/******************************************************************************
+
+Program to find the sum of digits of a number until the sum is reduce to 1digit
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+
+int Sum(int n)
+{
+    if (n == 0)
+       return 0;
+    return (n % 9 == 0) ? 9 : (n % 9);
+}
+ 
+int main()
+{
+    int n = 1234;
+    printf("%d",Sum(n));
+    return 0;
+}
