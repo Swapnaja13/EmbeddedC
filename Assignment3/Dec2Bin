@@ -1,0 +1,21 @@
+/******************************************************************************
+              Write a program to convert decimal to binary number
+*******************************************************************************/
+
+#include <stdio.h>
+
+int fun(int num)
+{
+    if(num==0)
+    return 0;
+    
+    fun(num/2);
+    printf("%d",num%2); 
+}
+
+
+int main()
+{
+    int num=12;
+    fun(num);
+}
