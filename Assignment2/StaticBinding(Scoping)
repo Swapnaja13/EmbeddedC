@@ -1,0 +1,13 @@
+/*Execute the code in screenshot.Give the output*/
+
+#include<stdio.h>
+
+int main()
+{
+  int x=10,y=3;
+  {
+    int x=100,z=10;       
+    printf("%d",x,z); //consider value of x=100 in the same scope
+  }
+  printf("%d",x,z); // value of x=10 is considered and z is underclared in this scope.   
+}
