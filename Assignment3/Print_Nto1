@@ -1,0 +1,21 @@
+/******************************************************************************
+              Write a program to print N to 1 using recursion 
+*******************************************************************************/
+
+#include <stdio.h>
+#include <conio.h>
+
+int fun(int N)
+{
+    if(N==0)
+    return 0;
+    printf("%d ",N);
+    return fun(N-1);
+}
+
+int main()
+{
+    int N=15;
+    fun(N);
+}
+
