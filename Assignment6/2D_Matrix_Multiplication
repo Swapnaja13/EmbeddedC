@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int arrA[3][3]={{1,2,3},{1,2,1},{3,1,2}};
+    int arrB[3][3]={{1,2,3},{1,2,1},{3,1,2}};
+    int i,j,k,sum;
+    int product[3][3];
+    
+    for(i=0;i<3;i++)
+    {   
+        for(j=0;j<3;j++)
+        {   
+             sum=0;
+            for(k=0;k<3;k++)
+            {
+                sum = arrA[i][k]* arrB[k][j] + sum;
+            }
+          product[i][j]= sum;
+        }
+    }
+    printf("Resultant matrix :\n");
+    for(i=0;i<3;i++)
+    {   
+        for(j=0;j<3;j++)
+        {
+          printf("%d ",product[i][j]);
+        }
+        printf("\n");
+    }
+}
