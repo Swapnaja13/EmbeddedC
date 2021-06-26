@@ -1,0 +1,8 @@
+/*Bitwise operator using Macro */
+
+#define SET(DATA,BIT) DATA|(0X0F<<BIT)  
+
+#define CLEAR(DATA,BIT) DATA&(~(0X0F<<BIT))
+
+#define TOGGLE(DATA,BIT) DATA^(0X0F<<BIT)
+
