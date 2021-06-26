@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+
+typedef struct
+{
+  char int_name[32];
+  int (*isr)();
+} isr_t;
+
+int keyboard_interrupt()
+{
+  printf("Generating keyboard_interrupt..\n");
+}
+
+int mouse_interrupt()
+{
+  printf("Mouse_Interrupt..\n");
+}
+
+int rtc_interrupt()
+{
+  printf("Rtc_interrupt..\n");
+}
+
+int i2c_interrupt()
+{
+  printf("I2C_interrupt..\n");
+}
+
+int usb_interrupt()
+{
+  printf("USB_Interrupt..\n");
+}
+
+isr_t ivt[]=
+{
+{"isr0",keyboard_interrupt},
+{"isr1",rtc_interrupt},
+{"isr2",i2c_interrupt},
+{"isr3",mouse_interrupt},
+{"isr4",usb_interrupt},
+};
+
+int main()
+{
+  while(1)
+  {
+    (ivt[rand()%5.isr)();
+    sleep(1);
+  }
+}
