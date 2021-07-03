@@ -1,0 +1,17 @@
+/* Count set bits in an integer */
+
+#include <stdio.h>
+
+int main()
+{
+    unsigned int count=0,n=7;
+    
+    while(n)
+    {
+        count+=n&1;
+        n>>=1;
+    }
+    printf("%d",count);
+    
+    return 0;
+}
