@@ -1,0 +1,10 @@
+/* Macro to find even or odd using bitwise operator */
+
+#define Even_Odd(num) (num&1)?printf("ODD"):printf("EVEN") 
+
+#include<stdio.h>
+int main()
+{
+int num=6;
+Even_Odd(6);
+}
