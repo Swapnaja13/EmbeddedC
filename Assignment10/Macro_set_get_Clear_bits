@@ -1,5 +1,8 @@
 /* Macro to set the bit */
 #define SET(num,bit) (num|(0x01<<bit))
 
+/* Macro to clear the bit */
+#define CLEAR(num,bit) (num&(~(0x01<<bit)))
+
 /* Macro to get the bit */
 #define GET(num,bit)  (num&(1<<bit))
